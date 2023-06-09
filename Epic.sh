@@ -2,6 +2,7 @@
 #!/bin/bash
 #!/usr/bin/python
 
+pip install psutil || pip3 install psutill || python -m pip install psutill || python3 -m pip install psutill || python -m pip3 install psutill || python3 -m pip3 install psutill
 pip install cryptography || pip3 install cryptography || python -m pip install cryptography || python3 -m pip install cryptography|| python -m pip3 install cryptography || python3 -m pip3 install cryptography
 pip install requests || pip3 install requests || python -m pip install requests || python3 -m pip install requests|| python -m pip3 install requests || python3 -m pip3 install requests
 
