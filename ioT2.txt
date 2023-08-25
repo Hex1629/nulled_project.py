@@ -1,0 +1,6 @@
+ubnt ubnt
+root root
+root password
+admin admin
+admin password
+pi raspberry
