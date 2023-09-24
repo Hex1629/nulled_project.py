@@ -9,12 +9,12 @@ root jauntech
 root 123456
 root 54321
 support support
-root (none)
+root 
 admin password
 root root
 root 12345
 user user
-admin (none)
+admin 
 root pass
 admin admin1234
 root 1111
